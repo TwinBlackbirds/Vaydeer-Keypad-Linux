@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs 'Vaydeer-Keypad-Linux' script at Startup
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/keypad.sh
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
